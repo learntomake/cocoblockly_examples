@@ -1,0 +1,90 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="led_neopixel_setup" id="d|j13kAMVA]b-ed+(PG5" x="41" y="15">
+    <field name="neopixel_initpin">6</field>
+    <field name="neopixel_initwidth">5</field>
+    <field name="neopixel_initheight">5</field>
+    <field name="neopixel_initbright">40</field>
+  </block>
+  <block type="led_pattern_5x5" id=",SK#h4AMLUdp:PYTCg*`" x="47" y="129">
+    <field name="0_0">#00ff00</field>
+    <field name="0_1">#00ff00</field>
+    <field name="0_2">#3b5587</field>
+    <field name="0_3">#00ff00</field>
+    <field name="0_4">#00ff00</field>
+    <field name="1_0">#3B5587</field>
+    <field name="1_1">#ffff00</field>
+    <field name="1_2">#3b5587</field>
+    <field name="1_3">#ffff00</field>
+    <field name="1_4">#3b5587</field>
+    <field name="2_0">#3b5587</field>
+    <field name="2_1">#3b5587</field>
+    <field name="2_2">#3B5587</field>
+    <field name="2_3">#3b5587</field>
+    <field name="2_4">#3B5587</field>
+    <field name="3_0">#0000ff</field>
+    <field name="3_1">#3b5587</field>
+    <field name="3_2">#3b5587</field>
+    <field name="3_3">#3b5587</field>
+    <field name="3_4">#0000ff</field>
+    <field name="4_0">#3b5587</field>
+    <field name="4_1">#0000ff</field>
+    <field name="4_2">#0000ff</field>
+    <field name="4_3">#0000ff</field>
+    <field name="4_4">#3b5587</field>
+    <next>
+      <block type="led_showall" id="8v;Z:U%[JB{;j8=x,Yy`">
+        <next>
+          <block type="time_delay" id="Qd~oWBF}5qC`zoI2[Vw]">
+            <value name="DELAY_TIME_MILI">
+              <block type="math_number" id="Ot/K3**@{vhnzuoYuj_5">
+                <field name="NUM">1000</field>
+              </block>
+            </value>
+            <next>
+              <block type="led_pattern_5x5" id="5sb~8)Hjio}14FUoXjfm">
+                <field name="0_0">#00ff00</field>
+                <field name="0_1">#3b5587</field>
+                <field name="0_2">#3b5587</field>
+                <field name="0_3">#3b5587</field>
+                <field name="0_4">#00ff00</field>
+                <field name="1_0">#3b5587</field>
+                <field name="1_1">#00ff00</field>
+                <field name="1_2">#3b5587</field>
+                <field name="1_3">#00ff00</field>
+                <field name="1_4">#3b5587</field>
+                <field name="2_0">#3b5587</field>
+                <field name="2_1">#ff0000</field>
+                <field name="2_2">#3b5587</field>
+                <field name="2_3">#ff0000</field>
+                <field name="2_4">#3B5587</field>
+                <field name="3_0">#0000ff</field>
+                <field name="3_1">#3b5587</field>
+                <field name="3_2">#3b5587</field>
+                <field name="3_3">#3b5587</field>
+                <field name="3_4">#0000ff</field>
+                <field name="4_0">#0000ff</field>
+                <field name="4_1">#0000ff</field>
+                <field name="4_2">#0000ff</field>
+                <field name="4_3">#0000ff</field>
+                <field name="4_4">#0000ff</field>
+                <next>
+                  <block type="led_showall" id="`Br@GBr3Zll`IUHK+xyN">
+                    <next>
+                      <block type="time_delay" id="meE/4FGI)-celc8Mp]x.">
+                        <value name="DELAY_TIME_MILI">
+                          <block type="math_number" id="C|%X54v`U_K{bp-/1Yb;">
+                            <field name="NUM">1000</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

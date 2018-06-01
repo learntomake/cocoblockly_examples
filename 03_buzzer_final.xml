@@ -1,0 +1,38 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="tone" id=";]VOndGs4g)vyMX`IJzW" x="39" y="53">
+    <field name="PINSNUM">11</field>
+    <value name="FREQUENCY">
+      <shadow type="math_number" id="{t7k/u=fliJ`?`]Y=H(C">
+        <field name="NUM">800</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="time_delay" id="!^Q~oI::NF,]dFFlvP6v">
+        <value name="DELAY_TIME_MILI">
+          <block type="math_number" id="]WHDfq,/ao@X,y-e;fx%">
+            <field name="NUM">1000</field>
+          </block>
+        </value>
+        <next>
+          <block type="tone" id="WyH3b{87bG(6}oCQ~9+p">
+            <field name="PINSNUM">11</field>
+            <value name="FREQUENCY">
+              <shadow type="math_number" id="P#Zm`.%JGvT/!]W|:+zm">
+                <field name="NUM">400</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="time_delay" id="xrar)b*8LvMTA0)Svza}">
+                <value name="DELAY_TIME_MILI">
+                  <block type="math_number" id="sWw:QjZC/=tbI%=iV|Bb">
+                    <field name="NUM">500</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

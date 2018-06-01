@@ -1,0 +1,36 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="serial_setup" id="71RQRfI7Ygyw1JMdL+Ss" x="20" y="-10">
+    <field name="SERIAL_ID">Serial</field>
+    <field name="SPEED">9600</field>
+  </block>
+  <block type="env_init" id="R,mk;7]+%zf_|k8/OiaV" x="24" y="31"></block>
+  <block type="variables_set" id="%(7r*XZY1dvYEVk)#%g!" x="22" y="129">
+    <field name="VAR">t</field>
+    <value name="VALUE">
+      <block type="iot_read_temp" id=".K`OfIN_GmvVlg4ckdZc">
+        <field name="env_sensor_temp">4</field>
+        <field name="temp_unit">c</field>
+      </block>
+    </value>
+    <next>
+      <block type="serial_print" id="TT~%k|Qf^7AT/xMhiXEO">
+        <field name="SERIAL_ID">Serial</field>
+        <field name="NEW_LINE">TRUE</field>
+        <value name="CONTENT">
+          <block type="variables_get" id="42Mu(@%vmL5NH=GFy]m,">
+            <field name="VAR">t</field>
+          </block>
+        </value>
+        <next>
+          <block type="time_delay" id="s;Izwd.=f78H62#S*P(Z">
+            <value name="DELAY_TIME_MILI">
+              <block type="math_number" id="g{gCT+K`N=KiVUiSP|}u">
+                <field name="NUM">50</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

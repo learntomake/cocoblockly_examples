@@ -1,0 +1,98 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="controls_for" id="}@8|gnIg08xq3-l1t3rl" x="-92" y="-9">
+    <field name="VAR">i</field>
+    <value name="FROM">
+      <block type="math_number" id=";v=.n11/NXIPV{PzBQu5">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <value name="TO">
+      <block type="math_number" id="Sc#AsG9q:B)j^kUSyICU">
+        <field name="NUM">6</field>
+      </block>
+    </value>
+    <value name="BY">
+      <block type="math_number" id="{Z1H[8`9r`CjIvWmU3MK">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="io_digitalwrite" id=";%mzJ7ULLk-waP%-@1b{">
+        <field name="PIN">i</field>
+        <value name="STATE">
+          <block type="io_highlow" id="d%Apv,59{AiNk9r#k=4O">
+            <field name="STATE">HIGH</field>
+          </block>
+        </value>
+        <next>
+          <block type="time_delay" id="AH2;Xok7aY@hEXzF@]d(">
+            <value name="DELAY_TIME_MILI">
+              <block type="math_number" id="q_^uf}ZhUh|Eawe;_4Eh">
+                <field name="NUM">30</field>
+              </block>
+            </value>
+            <next>
+              <block type="io_digitalwrite" id="w1FPeK?kCKB1Gj_hLXLB">
+                <field name="PIN">i</field>
+                <value name="STATE">
+                  <block type="io_highlow" id="/d{?7=hUZqE,~)T+G+0X">
+                    <field name="STATE">LOW</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="controls_for" id="r1!xP.QUk~D}nI3]d!bN">
+        <field name="VAR">i</field>
+        <value name="FROM">
+          <block type="math_number" id="%WhzC9hwOvnS51o^XnoN">
+            <field name="NUM">6</field>
+          </block>
+        </value>
+        <value name="TO">
+          <block type="math_number" id="]#f%zQyI{Z_=w90/#n_k">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <value name="BY">
+          <block type="math_number" id="*Nd)//vMz9i9g#kk|I/m">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="io_digitalwrite" id="~B_bc+E7L%;+;f!X6Kr^">
+            <field name="PIN">i</field>
+            <value name="STATE">
+              <block type="io_highlow" id="yf|jB*i;?Ys2{BAK8V:I">
+                <field name="STATE">HIGH</field>
+              </block>
+            </value>
+            <next>
+              <block type="time_delay" id="pH;jyn!ZSppbUF(aw_ii">
+                <value name="DELAY_TIME_MILI">
+                  <block type="math_number" id="C+d_8#)Bernuf7t.EFs{">
+                    <field name="NUM">30</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="io_digitalwrite" id="kaB=TzXg@EON*7j2Cf`_">
+                    <field name="PIN">i</field>
+                    <value name="STATE">
+                      <block type="io_highlow" id="gK@cyW~_qBYOdJ`n)J]Y">
+                        <field name="STATE">LOW</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

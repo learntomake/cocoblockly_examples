@@ -1,0 +1,124 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="serial_setup" id="71RQRfI7Ygyw1JMdL+Ss" x="20" y="-10">
+    <field name="SERIAL_ID">Serial</field>
+    <field name="SPEED">9600</field>
+  </block>
+  <block type="env_init" id="R,mk;7]+%zf_|k8/OiaV" x="24" y="31"></block>
+  <block type="led_neopixel_setup" id="Amu|P/Q/-1}:GhR!0_AL" x="211" y="24">
+    <field name="neopixel_initpin">6</field>
+    <field name="neopixel_initwidth">5</field>
+    <field name="neopixel_initheight">5</field>
+    <field name="neopixel_initbright">20</field>
+  </block>
+  <block type="variables_set" id="%(7r*XZY1dvYEVk)#%g!" x="24" y="145">
+    <field name="VAR">t</field>
+    <value name="VALUE">
+      <block type="iot_read_temp" id=".K`OfIN_GmvVlg4ckdZc">
+        <field name="env_sensor_temp">4</field>
+        <field name="temp_unit">c</field>
+      </block>
+    </value>
+    <next>
+      <block type="serial_print" id="TT~%k|Qf^7AT/xMhiXEO">
+        <field name="SERIAL_ID">Serial</field>
+        <field name="NEW_LINE">TRUE</field>
+        <value name="CONTENT">
+          <block type="variables_get" id="42Mu(@%vmL5NH=GFy]m,">
+            <field name="VAR">t</field>
+          </block>
+        </value>
+        <next>
+          <block type="controls_if" id=":?C75kw92c|/ITR%6^Td">
+            <mutation else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_compare" id="(EPqjL-ALK9R51-C.._x">
+                <field name="OP">GTE</field>
+                <value name="A">
+                  <block type="variables_get" id="UzL05DV9xa{}!??mD9ay">
+                    <field name="VAR">t</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="uv8u`Du06(Oo7uD]shIM">
+                    <field name="NUM">23</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="led_pattern_5x5" id="L{8P*Mn-{supu}i`Krsk">
+                <field name="0_0">#ffa500</field>
+                <field name="0_1">#ffa500</field>
+                <field name="0_2">#3B5587</field>
+                <field name="0_3">#3B5587</field>
+                <field name="0_4">#3B5587</field>
+                <field name="1_0">#ffa500</field>
+                <field name="1_1">#ffa500</field>
+                <field name="1_2">#3B5587</field>
+                <field name="1_3">#3B5587</field>
+                <field name="1_4">#3B5587</field>
+                <field name="2_0">#3B5587</field>
+                <field name="2_1">#3B5587</field>
+                <field name="2_2">#3B5587</field>
+                <field name="2_3">#3B5587</field>
+                <field name="2_4">#3B5587</field>
+                <field name="3_0">#3B5587</field>
+                <field name="3_1">#3B5587</field>
+                <field name="3_2">#3B5587</field>
+                <field name="3_3">#3B5587</field>
+                <field name="3_4">#3B5587</field>
+                <field name="4_0">#3B5587</field>
+                <field name="4_1">#3B5587</field>
+                <field name="4_2">#3B5587</field>
+                <field name="4_3">#3B5587</field>
+                <field name="4_4">#3B5587</field>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="led_pattern_5x5" id="AgPtF*#dNk7SEafRZE3-">
+                <field name="0_0">#00ff00</field>
+                <field name="0_1">#00ff00</field>
+                <field name="0_2">#3B5587</field>
+                <field name="0_3">#3B5587</field>
+                <field name="0_4">#3B5587</field>
+                <field name="1_0">#00ff00</field>
+                <field name="1_1">#00ff00</field>
+                <field name="1_2">#3B5587</field>
+                <field name="1_3">#3B5587</field>
+                <field name="1_4">#3B5587</field>
+                <field name="2_0">#3B5587</field>
+                <field name="2_1">#3B5587</field>
+                <field name="2_2">#3B5587</field>
+                <field name="2_3">#3B5587</field>
+                <field name="2_4">#3B5587</field>
+                <field name="3_0">#3B5587</field>
+                <field name="3_1">#3B5587</field>
+                <field name="3_2">#3B5587</field>
+                <field name="3_3">#3B5587</field>
+                <field name="3_4">#3B5587</field>
+                <field name="4_0">#3B5587</field>
+                <field name="4_1">#3B5587</field>
+                <field name="4_2">#3B5587</field>
+                <field name="4_3">#3B5587</field>
+                <field name="4_4">#3B5587</field>
+              </block>
+            </statement>
+            <next>
+              <block type="led_showall" id="aBnkHeRZPSEzkccZM:P4">
+                <next>
+                  <block type="time_delay" id="s;Izwd.=f78H62#S*P(Z">
+                    <value name="DELAY_TIME_MILI">
+                      <block type="math_number" id="g{gCT+K`N=KiVUiSP|}u">
+                        <field name="NUM">100</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

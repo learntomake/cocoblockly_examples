@@ -1,0 +1,10 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="digital_light" id=",A,YwhzU`j]#N/Hk2G!L" x="92" y="132">
+    <field name="PINSNUM">0</field>
+    <next>
+      <block type="digital_light" id="y:pC`_s{)2S#r#7=o*`Q">
+        <field name="PINSNUM">6</field>
+      </block>
+    </next>
+  </block>
+</xml>

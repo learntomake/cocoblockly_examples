@@ -1,0 +1,34 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="serial_setup" id="71RQRfI7Ygyw1JMdL+Ss" x="20" y="-10">
+    <field name="SERIAL_ID">Serial</field>
+    <field name="SPEED">9600</field>
+  </block>
+  <block type="variables_set" id="%(7r*XZY1dvYEVk)#%g!" x="24" y="37">
+    <field name="VAR">vr</field>
+    <value name="VALUE">
+      <block type="read_knob" id="|!h,7wL_V2`gJ4|:oD{2">
+        <field name="PINSNUM">A3</field>
+      </block>
+    </value>
+    <next>
+      <block type="serial_print" id="TT~%k|Qf^7AT/xMhiXEO">
+        <field name="SERIAL_ID">Serial</field>
+        <field name="NEW_LINE">TRUE</field>
+        <value name="CONTENT">
+          <block type="variables_get" id="42Mu(@%vmL5NH=GFy]m,">
+            <field name="VAR">vr</field>
+          </block>
+        </value>
+        <next>
+          <block type="time_delay" id="s;Izwd.=f78H62#S*P(Z">
+            <value name="DELAY_TIME_MILI">
+              <block type="math_number" id="g{gCT+K`N=KiVUiSP|}u">
+                <field name="NUM">50</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
